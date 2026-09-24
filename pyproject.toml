@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trade-incubate"
+version = "0.1.0"
+description = "Paper-trading incubation program: the 63-day quarter that answers 'is the strategy behaving like its backtest?'"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "crieck2010" }]
+keywords = ["trading", "paper-trading", "incubation", "drift-detection", "validation", "quantitative-finance"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business :: Financial",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+trade-incubate = "trade_incubate.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/crieck2010/trade-incubate"
+Repository = "https://github.com/crieck2010/trade-incubate"
+
+[tool.setuptools.packages.find]
+where = ["src"]
